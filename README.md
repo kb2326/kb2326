@@ -3,7 +3,6 @@
 <p align="center">
   <a href="https://linkedin.com/in/karthickbalajege"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://medium.com/@karthickbalaje01"><img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/></a>
-  <a href="https://kb2326.github.io"><img src="https://img.shields.io/badge/Website-0a7d4a?style=for-the-badge&logo=githubpages&logoColor=white" alt="Website"/></a>
   <a href="mailto:karthickbalaje01@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
   <img src="https://img.shields.io/badge/Bengaluru,%20India-555555?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Bengaluru, India"/>
 </p>
