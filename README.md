@@ -7,14 +7,60 @@
   <img src="https://img.shields.io/badge/Bengaluru,%20India-555555?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Bengaluru, India"/>
 </p>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=500&size=17&duration=3200&pause=1200&color=0A7D4A&center=true&vCenter=true&width=640&lines=Models+measure%2C+the+agent+reasons%2C+rules+decide.;Every+number+comes+with+the+code+that+computed+it.;Evaluate+the+evaluator+before+you+trust+it." alt="Models measure, the agent reasons, rules decide. Every number comes with the code that computed it. Evaluate the evaluator before you trust it."/>
+</p>
+
 <p align="center"><b>I build LLM agents that are evaluated before they ship and governed once they're live.</b></p>
+
+<table align="center">
+<tr>
+<td align="center"><b>1.00</b><br/><sub>escalation recall<br/>ClaimLens</sub></td>
+<td align="center"><b>33 / 33</b><br/><sub>red-team attacks held<br/>ClaimLens</sub></td>
+<td align="center"><b>1.00 / 0.91</b><br/><sub>knockout recall / precision<br/>Grant Capture</sub></td>
+<td align="center"><b>0</b><br/><sub>invented facts in drafts<br/>Grant Capture</sub></td>
+<td align="center"><b>10 / 10</b><br/><sub>answers with re-runnable receipts<br/>Health Agent</sub></td>
+</tr>
+</table>
 
 ---
 
 ### 🚀 Now
 
 - **In production:** an LLM agent fleet for a US direct-to-consumer apparel brand. It runs 21 scheduled jobs across 10 commerce and marketing APIs, checks every claim against live data before it reaches the founder, and has a person approve every dollar of ad spend.
-- **Building:** [Calibrated Health Agent](https://kb2326.github.io/calibrated-health-agent/), a personal health agent that keeps score. It makes daily probabilistic forecasts from my own wearable and journal data and scores them against simple baselines, and every reported number comes with the code that computed it. A public [hash ledger](https://github.com/kb2326/cha-ledger-log) makes the forecast log tamper-evident.
+- **Building in the open soon:** two research projects, both going public once their write-ups are ready (below).
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🫀 Calibrated Health Agent <sub><img src="https://img.shields.io/badge/in_progress-going_public_soon-f2a33a?style=flat-square" alt="In progress, going public soon"/></sub>
+A personal health agent on my own wearable and journal data. Ask it a question and it answers with **code it ran in a sandbox**, and every number links to a **receipt you can re-run**. It also tests itself in the strictest way possible: **seven forecasters make sealed, pre-registered daily predictions** that are graded against simple baselines, with the chain of hashes published.
+
+- Google ADK workflow: single agent vs orchestrator + specialists, judged by evals
+- Sandboxed code, authorizer-guarded SQL, prompt-injection wrapping, memory
+- Nightly investigator files hypotheses that are judged only on later days
+- Runs daily on GCP (Cloud Run, Terraform) for **under $1/month**
+
+[Public hash log](https://github.com/kb2326/cha-ledger-log) · [Forecast scoreboard](https://kb2326.github.io/cha-ledger-log/)
+
+`Google ADK` `Gemini` `Vertex AI` `TimesFM` `Terraform` `GCP`
+
+</td>
+<td width="50%" valign="top">
+
+#### 🧪 Gemma 4 SWE Agent <sub><img src="https://img.shields.io/badge/in_progress-going_public_soon-f2a33a?style=flat-square" alt="In progress, going public soon"/></sub>
+My entry to Kaggle's **Gemma 4 Developer Agent** competition and its **paper track**: *Ask or Enforce? Prompt Rules vs. Agent Structure for a Small Open Model under a Fixed Budget.* A Gemma 4 agent fixes real GitHub issues, graded by hidden tests, within a fixed per-task budget.
+
+- Declarative Google ADK (YAML) agents and prompts, one experiment arm each
+- Every prediction committed before its run; held-out tasks fixed by seed
+- Paired statistics over transcripts; offline validators for every submission
+
+`Gemma 4` `Google ADK` `Kaggle` `Paired statistics`
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -88,7 +134,6 @@ Design and prototype for an agent that works across 500+ tools: a two-stage sema
 
 - [feedback-analysis-dashboard](https://github.com/kb2326/feedback-analysis-dashboard): sentiment analysis, topic modeling and user segmentation (Streamlit, scikit-learn, Plotly)
 - [Smart-Grid-ML-Optimization-Project](https://github.com/kb2326/Smart-Grid-ML-Optimization-Project): energy demand forecasting pipeline
-- [athlete-ecg-agent](https://github.com/kb2326/athlete-ecg-agent): 12-lead ECG analysis (STAT 5010 project)
 
 </details>
 
@@ -101,6 +146,8 @@ Design and prototype for an agent that works across 500+ tools: a two-stage sema
 > **Evaluate the evaluator.** An LLM judge is only useful once you've measured how often it agrees with a human.
 >
 > **Build the outer loop first.** Specs, evals, tracing and approval rules come before the clever part.
+>
+> **Publish the losses.** Pre-register the test, report the baseline, and keep the result even when the simple rule wins.
 
 ---
 
@@ -112,10 +159,11 @@ Design and prototype for an agent that works across 500+ tools: a two-stage sema
 
 | | |
 |---|---|
-| **Agents** | ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?logo=langchain&logoColor=white) ![MCP](https://img.shields.io/badge/Model_Context_Protocol-000000?logo=anthropic&logoColor=white) ![Claude](https://img.shields.io/badge/Claude_SDK-D97757?logo=anthropic&logoColor=white) ![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?logo=google&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?logo=googlegemini&logoColor=white) |
-| **Retrieval & evals** | Hybrid search (BM25 + vectors) · LanceDB · pgvector · golden sets · LLM-as-judge · red-teaming |
-| **Models** | PyTorch · YOLO11 segmentation · calibration · scikit-learn |
-| **Shipping** | FastAPI · Docker · GitHub Actions · DVC · Terraform · GCP |
+| **Agents** | ![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?logo=google&logoColor=white) ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?logo=langchain&logoColor=white) ![MCP](https://img.shields.io/badge/Model_Context_Protocol-000000?logo=anthropic&logoColor=white) ![Claude](https://img.shields.io/badge/Claude_SDK-D97757?logo=anthropic&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?logo=googlegemini&logoColor=white) ![Gemma](https://img.shields.io/badge/Gemma_4-4285F4?logo=google&logoColor=white) |
+| **Evals & safety** | Golden sets · LLM-as-judge with human agreement · red-teaming · pre-registered experiments · proper scoring rules |
+| **Retrieval** | Hybrid search (BM25 + vectors) · LanceDB · pgvector · corrective RAG |
+| **Models** | PyTorch · YOLO11 segmentation · TimesFM · calibration · scikit-learn |
+| **Shipping** | FastAPI · Docker · GitHub Actions · DVC · Terraform · GCP (Cloud Run, Vertex AI, BigQuery) |
 
 ---
 
