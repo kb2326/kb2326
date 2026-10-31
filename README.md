@@ -19,7 +19,7 @@
 <td align="center"><b>33 / 33</b><br/><sub>red-team attacks held<br/>ClaimLens</sub></td>
 <td align="center"><b>1.00 / 0.91</b><br/><sub>knockout recall / precision<br/>Grant Capture</sub></td>
 <td align="center"><b>0</b><br/><sub>invented facts in drafts<br/>Grant Capture</sub></td>
-<td align="center"><b>10 / 10</b><br/><sub>answers with re-runnable receipts<br/>Health Agent</sub></td>
+<td align="center"><b>29 / 32</b><br/><sub>labelled failures fixed<br/>Health Agent</sub></td>
 </tr>
 </table>
 
@@ -28,26 +28,31 @@
 ### 🚀 Now
 
 - **In production:** an LLM agent fleet for a US direct-to-consumer apparel brand. It runs 21 scheduled jobs across 10 commerce and marketing APIs, checks every claim against live data before it reaches the founder, and has a person approve every dollar of ad spend.
-- **Research:** a pre-registered study of Gemma 4 coding agents, now public with its paper, and a health agent going public soon (below).
+- **Just shipped:** the [Calibrated Health Agent](https://github.com/kb2326/calibrated-health-agent) is public: an agent on my own health data with a web app, an eval suite and a CI gate (below).
+- **Research:** a pre-registered study of Gemma 4 coding agents, public with its paper.
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### 🫀 Calibrated Health Agent <sub><img src="https://img.shields.io/badge/in_progress-going_public_soon-f2a33a?style=flat-square" alt="In progress, going public soon"/></sub>
-A personal health agent on my own wearable and journal data. Ask it a question and it answers with **code it ran in a sandbox**, and every number links to a **receipt you can re-run**. It also tests itself in the strictest way possible: **seven forecasters make sealed, pre-registered daily predictions** that are graded against simple baselines, with the chain of hashes published.
+#### 🫀 [Calibrated Health Agent](https://github.com/kb2326/calibrated-health-agent) <sub><img src="https://img.shields.io/badge/live-open_source-0a7d4a?style=flat-square" alt="Live, open source"/></sub>
+An AI agent you talk to about your own wearable and journal data. It plans, writes SQL or Python, runs it in a sandbox, and **every number links to a receipt you can re-run**. A code check, not a prompt, flags any figure no tool computed.
 
-- Google ADK workflow: single agent vs orchestrator + specialists, judged by evals
-- Sandboxed code, authorizer-guarded SQL, prompt-injection wrapping, memory
-- Nightly investigator files hypotheses that are judged only on later days
-- Runs daily on GCP (Cloud Run, Terraform) for **under $1/month**
+- One ReAct agent with thinking and 14 tools on Google ADK; specialists as tools
+- **265 eval cases**, my own labels on 110 answers, a red team and a **CI gate on every PR**
+- After error analysis and a redesign, **29 of 32** labelled failures answered better
+- Web app over **AG-UI**: streamed steps, tappable receipts, live-location weather, behind Google sign-in
+- **Seven forecasters** make sealed daily predictions, hash-chained and [published](https://github.com/kb2326/cha-ledger-log)
+- Runs on GCP (Cloud Run, Terraform) for **under $1/month**
 
-[Public hash log](https://github.com/kb2326/cha-ledger-log) · [Forecast scoreboard](https://kb2326.github.io/cha-ledger-log/)
+[Code](https://github.com/kb2326/calibrated-health-agent) · [Forecast scoreboard](https://kb2326.github.io/cha-ledger-log/)
 
-`Google ADK` `Gemini` `Vertex AI` `TimesFM` `Terraform` `GCP`
+`Google ADK` `Gemini` `AG-UI` `Next.js` `Vertex AI` `Terraform`
 
 </td>
-<td wid#### 🧪 [Asking vs. Adding a Stage](https://github.com/kb2326/gemma4-ask-or-enforce) <sub><img src="https://img.shields.io/badge/paper-submitted-0a7d4a?style=flat-square" alt="Paper submitted"/></sub>
+<td width="50%" valign="top">
+
+#### 🧪 [Asking vs. Adding a Stage](https://github.com/kb2326/gemma4-ask-or-enforce) <sub><img src="https://img.shields.io/badge/paper-submitted-0a7d4a?style=flat-square" alt="Paper submitted"/></sub>
 My paper for Kaggle's **Gemma 4 Developer Agent** competition (paper track): *A Pre-Registered Test on a Gemma 4 Coding Agent.* Gemma 4 31B fixes real GitHub issues within a fixed 4.5-minute budget; I compared prompt rules with a planning stage.
 
 - Designed on 30 tasks, then tested **pre-registered claims once on 41 held-out tasks**
@@ -57,7 +62,7 @@ My paper for Kaggle's **Gemma 4 Developer Agent** competition (paper track): *A 
 
 [Code](https://github.com/kb2326/gemma4-ask-or-enforce) · [Reproduce the tables](https://www.kaggle.com/code/karthickbalaje/asking-vs-adding-a-stage-reproduce-tables)
 
-`Gemma 4` `Google ADK` `vLLM` `Kaggle` `Pre-registration`gle` `Paired statistics`
+`Gemma 4` `Google ADK` `vLLM` `Kaggle` `Pre-registration` `Paired statistics`
 
 </td>
 </tr>
@@ -155,16 +160,16 @@ Design and prototype for an agent that works across 500+ tools: a two-stage sema
 ### 🛠️ Stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,react,postgres,docker,githubactions,gcp&perline=8" alt="Python, PyTorch, FastAPI, React, Postgres, Docker, GitHub Actions, GCP"/>
+  <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,react,nextjs,ts,postgres,docker,githubactions,gcp,terraform&perline=11" alt="Python, PyTorch, FastAPI, React, Next.js, TypeScript, Postgres, Docker, GitHub Actions, GCP, Terraform"/>
 </p>
 
 | | |
 |---|---|
-| **Agents** | ![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?logo=google&logoColor=white) ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?logo=langchain&logoColor=white) ![MCP](https://img.shields.io/badge/Model_Context_Protocol-000000?logo=anthropic&logoColor=white) ![Claude](https://img.shields.io/badge/Claude_SDK-D97757?logo=anthropic&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?logo=googlegemini&logoColor=white) ![Gemma](https://img.shields.io/badge/Gemma_4-4285F4?logo=google&logoColor=white) |
-| **Evals & safety** | Golden sets · LLM-as-judge with human agreement · red-teaming · pre-registered experiments · proper scoring rules |
-| **Retrieval** | Hybrid search (BM25 + vectors) · LanceDB · pgvector · corrective RAG |
+| **Agents** | ![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?logo=google&logoColor=white) ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?logo=langchain&logoColor=white) ![MCP](https://img.shields.io/badge/Model_Context_Protocol-000000?logo=anthropic&logoColor=white) ![AG-UI](https://img.shields.io/badge/AG--UI-111111) ![Claude](https://img.shields.io/badge/Claude_SDK-D97757?logo=anthropic&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?logo=googlegemini&logoColor=white) ![Gemma](https://img.shields.io/badge/Gemma_4-4285F4?logo=google&logoColor=white) |
+| **Evals & safety** | Golden sets · LLM-as-judge with human agreement · CI eval gates · red-teaming · pre-registered experiments · proper scoring rules |
+| **Retrieval & data** | Hybrid search (BM25 + vectors) · LanceDB · pgvector · corrective RAG · semantic layers for agents |
 | **Models** | PyTorch · YOLO11 segmentation · TimesFM · calibration · scikit-learn |
-| **Shipping** | FastAPI · Docker · GitHub Actions · DVC · Terraform · GCP (Cloud Run, Vertex AI, BigQuery) |
+| **Shipping** | FastAPI · Next.js · Docker · GitHub Actions · DVC · Terraform · OpenTelemetry · GCP (Cloud Run, IAP, Vertex AI, BigQuery) |
 
 ---
 
