@@ -28,7 +28,7 @@
 ### 🚀 Now
 
 - **In production:** an LLM agent fleet for a US direct-to-consumer apparel brand. It runs 21 scheduled jobs across 10 commerce and marketing APIs, checks every claim against live data before it reaches the founder, and has a person approve every dollar of ad spend.
-- **Building in the open soon:** two research projects, both going public once their write-ups are ready (below).
+- **Research:** a pre-registered study of Gemma 4 coding agents, now public with its paper, and a health agent going public soon (below).
 
 <table>
 <tr>
@@ -47,16 +47,17 @@ A personal health agent on my own wearable and journal data. Ask it a question a
 `Google ADK` `Gemini` `Vertex AI` `TimesFM` `Terraform` `GCP`
 
 </td>
-<td width="50%" valign="top">
+<td wid#### 🧪 [Asking vs. Adding a Stage](https://github.com/kb2326/gemma4-ask-or-enforce) <sub><img src="https://img.shields.io/badge/paper-submitted-0a7d4a?style=flat-square" alt="Paper submitted"/></sub>
+My paper for Kaggle's **Gemma 4 Developer Agent** competition (paper track): *A Pre-Registered Test on a Gemma 4 Coding Agent.* Gemma 4 31B fixes real GitHub issues within a fixed 4.5-minute budget; I compared prompt rules with a planning stage.
 
-#### 🧪 Gemma 4 SWE Agent <sub><img src="https://img.shields.io/badge/in_progress-going_public_soon-f2a33a?style=flat-square" alt="In progress, going public soon"/></sub>
-My entry to Kaggle's **Gemma 4 Developer Agent** competition and its **paper track**: *Ask or Enforce? Prompt Rules vs. Agent Structure for a Small Open Model under a Fixed Budget.* A Gemma 4 agent fixes real GitHub issues, graded by hidden tests, within a fixed per-task budget.
+- Designed on 30 tasks, then tested **pre-registered claims once on 41 held-out tasks**
+- Prompt rules are followed to the letter (**20/20 vs 0/25**), not in intent
+- A planning-stage gain seen in development **did not replicate**, and the paper says so
+- Every table recomputed from per-task results in a public notebook
 
-- Declarative Google ADK (YAML) agents and prompts, one experiment arm each
-- Every prediction committed before its run; held-out tasks fixed by seed
-- Paired statistics over transcripts; offline validators for every submission
+[Code](https://github.com/kb2326/gemma4-ask-or-enforce) · [Reproduce the tables](https://www.kaggle.com/code/karthickbalaje/asking-vs-adding-a-stage-reproduce-tables)
 
-`Gemma 4` `Google ADK` `Kaggle` `Paired statistics`
+`Gemma 4` `Google ADK` `vLLM` `Kaggle` `Pre-registration`gle` `Paired statistics`
 
 </td>
 </tr>
