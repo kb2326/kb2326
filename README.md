@@ -45,7 +45,7 @@ An AI agent you talk to about your own wearable and journal data. It plans, writ
 - **Seven forecasters** make sealed daily predictions, hash-chained and [published](https://github.com/kb2326/cha-ledger-log)
 - Runs on GCP (Cloud Run, Terraform) for **under $1/month**
 
-[Code](https://github.com/kb2326/calibrated-health-agent) · [Forecast scoreboard](https://kb2326.github.io/cha-ledger-log/)
+[Code](https://github.com/kb2326/calibrated-health-agent) · [Write-up](https://medium.com/@karthickbalaje01/i-built-a-health-ai-agent-that-has-to-prove-every-number-it-tells-you-f8856a6a3f4e) · [Forecast scoreboard](https://kb2326.github.io/cha-ledger-log/)
 
 `Google ADK` `Gemini` `AG-UI` `Next.js` `Vertex AI` `Terraform`
 
