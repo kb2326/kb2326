@@ -1,6 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a7d4a,100:134e4a&height=170&section=header&text=Karthick%20Balaje&fontSize=44&fontColor=ffffff&fontAlignY=36&desc=AI%20engineer%20%C2%B7%20LLM%20agents%20that%20are%20evaluated%20before%20they%20ship&descSize=16&descAlignY=58" width="100%" alt="Karthick Balaje, AI engineer"/>
 
 <p align="center">
+  <a href="https://kb2326.github.io"><img src="https://img.shields.io/badge/Portfolio-0A7D4A?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
   <a href="https://linkedin.com/in/karthickbalajege"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://medium.com/@karthickbalaje01"><img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/></a>
   <a href="mailto:karthickbalaje01@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
