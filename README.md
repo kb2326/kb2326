@@ -27,7 +27,7 @@
 
 ### 🚀 Now
 
-- **In production:** an LLM agent fleet for a US direct-to-consumer apparel brand. It runs 21 scheduled jobs across 10 commerce and marketing APIs, checks every claim against live data before it reaches the founder, and has a person approve every dollar of ad spend.
+- **In production:** a 23-agent Claude fleet for a US direct-to-consumer apparel brand. It monitors 9 platforms (Shopify, Klaviyo, Meta/TikTok Ads, GA4), checks every claim against live data before it reaches the founder, and has a person approve every dollar of ad spend.
 - **Just shipped:** the [Calibrated Health Agent](https://github.com/kb2326/calibrated-health-agent) is public: an agent on my own health data with a web app, an eval suite and a CI gate (below).
 - **Research:** a pre-registered study of Gemma 4 coding agents, public with its paper.
 
@@ -135,13 +135,6 @@ Design and prototype for an agent that works across 500+ tools: a two-stage sema
 </tr>
 </table>
 
-<details>
-<summary><b>Earlier work</b></summary>
-
-- [feedback-analysis-dashboard](https://github.com/kb2326/feedback-analysis-dashboard): sentiment analysis, topic modeling and user segmentation (Streamlit, scikit-learn, Plotly)
-- [Smart-Grid-ML-Optimization-Project](https://github.com/kb2326/Smart-Grid-ML-Optimization-Project): energy demand forecasting pipeline
-
-</details>
 
 ---
 
